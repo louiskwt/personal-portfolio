@@ -116,6 +116,13 @@ img {
     color: var(--primary-blue);
 }
 
+#profile-pic {
+    border-radius: 50%;
+    height: 25%;
+    width: 20%;
+    margin-bottom: 1em;
+}
+
 /* Projects section */
 #projects {
     text-align: center;
@@ -153,23 +160,25 @@ img {
 
 
 .card-title {
-    font-size: 1.5rem;
-    padding: 0.3rem 0.5rem;
+    font-size: 1.3rem;
+    padding: 0.4rem 0.5rem;
+    margin-bottom: 1em;
     color: var(--primary-blue)
 }
 
 .card-img {
     width: 100%;
+    height: 80%;
     object-fit: cover;
     border-radius: 5px 5px 0 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .card {
         flex: 0 1 48%;
     }
     .card-title {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0.6rem 0.6rem;
     }
 }
@@ -193,6 +202,29 @@ img {
     color: var(--primary-blue);
 }
 
+.btn {
+    font-size: 0.8em;
+    background: var(--primary-blue);
+    color: var(--primary-black);
+    border: 1px solid var(--primary-black);
+    padding: 0.8rem 0.8rem;
+    margin-top: 3em;
+    transition: color 1s, background 2s;
+}
+
+.btn:hover {
+    background: var(--primary-black);
+    color: var(--primary-blue);
+}
+
+@media screen and (max-width: 800px) {
+    .btn {
+        font-size: 0.5em;
+        transition: color 1s, background 2s;
+    }
+}
+
+
 /* Contact */
 
 #contact {
@@ -213,8 +245,21 @@ img {
     width: 100%;
 }
 
-#contact-links > a {
-    margin: 1.8em;
+
+@media screen and (min-width: 400px) {
+
+    #contact-links > a {
+        margin: 0.5em;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #contact-links > a {
+        margin: 0.5em;
+        font-size: 0.5em;
+    }
 }
 
 .contact-details {
@@ -230,6 +275,11 @@ img {
 /* footer */
 footer {
     border-top: 3px solid var(--primary-blue);
+    padding: 0.2em
+}
+
+footer > p {
+    font-size: 0.8em;
 }
 
 /* Extra style  */
@@ -237,3 +287,29 @@ footer {
     color: var(--primary-blue);
 }
 
+/* Typing effect */
+#animated-text::after {
+    content: "|";
+    margin-left: 0.1em;
+    animation: blinkingCursor 1.5s linear infinite;
+}
+
+@keyframes blinkingCursor {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* https://ibb.co/r2M6Tyz */
+/* https://ibb.co/vh4VZNq */
+/* https://ibb.co/g4wkyQk */
